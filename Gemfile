@@ -1,6 +1,17 @@
 source 'https://rubygems.org'
 
+#use 'thin' server rather than WEBric
 gem 'thin'
+
+#use the latest 2.x release of RSpec in the test and development groups
+group :test, :development do
+	gem 'rspec-rails', "~> 2.14"
+end
+
+#capybara is Capybara a browser simulator in Ruby that is used for integration testing
+group :test do
+	gem 'capybara', "2.1.0"
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
